@@ -17,13 +17,22 @@ body {
   font-size: 14px;
   line-height: 1.6;
   color: rgba(0, 0, 0, 0.5);
-  background: whitesmoke;
+  background-image:url(https://thescubacoach.com/wp-content/uploads/2017/12/bigstock-Underwater-Background-Blue-Un-175964851.jpg);
 }
 @media screen and (max-width: 992px) {
   body {
     font-size: 16px;
   }
 }
+
+.mystyle {
+  width: 100%;
+  padding: 25px;
+  background-color: coral;
+  color: white;
+  font-size: 25px;
+}
+
 
 a {
   color: #228896;
