@@ -4,9 +4,13 @@ var fs = require('fs');
 var server =http.createServer(function(req,res){
   //html
   res.writeHead(200, {'Content-Type': 'text/html'});
+  
   var myReadStream = fs.createReadStream(__dirname + '/home.html','utf8');
   if (req.url === '/data.html') {
   var myReadStream = fs.createReadStream(__dirname + '/data.html','utf8');
+  
+  
+  
   }
   myReadStream.pipe(res);
 
@@ -14,6 +18,7 @@ var server =http.createServer(function(req,res){
   if (req.url === '/style.css') {
     res.writeHead(200, {'Content-type' : 'text/css'});
     var fileContents = fs.readFileSync('style.css', {encoding: 'utf8'});
+    
     res.write(fileContents);
   }
   //css page2
@@ -37,21 +42,13 @@ var server =http.createServer(function(req,res){
     var fileContents = fs.readFileSync('icomoon.css', {encoding: 'utf8'});
     res.write(fileContents);
   }
-  if (req.url === '/code/css/style.css') {
+  if (req.url === '/style2.css') {
     res.writeHead(200, {'Content-type' : 'text/css'});
-    var fileContents = fs.readFileSync('prashum/code/css/style.css', {encoding: 'utf8'});
+    var fileContents = fs.readFileSync('style2.css', {encoding: 'utf8'});
     res.write(fileContents);
   }
   
-
-
   
-
-
-   
-    
-    
-
 
 });
 
