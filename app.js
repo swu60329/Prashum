@@ -8,10 +8,14 @@ var server =http.createServer(function(req,res){
   var myReadStream = fs.createReadStream(__dirname + '/home.html','utf8');
   if (req.url === '/data.html') {
   var myReadStream = fs.createReadStream(__dirname + '/data.html','utf8');
-  
-  
-  
   }
+  if (req.url === '/news.html') {
+    var myReadStream = fs.createReadStream(__dirname + '/news.html','utf8');
+    }
+    if (req.url === '/stay.html') {
+      var myReadStream = fs.createReadStream(__dirname + '/stay.html','utf8');
+      } 
+
   myReadStream.pipe(res);
 
   //css page1
