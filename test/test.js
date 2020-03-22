@@ -1,12 +1,20 @@
+<<<<<<< HEAD
 var atime = require('../simpletime.js');
 var linkedlist = require('../linkedlist.js');
 var linknode = require('../linknode.js');
 var comparator = require('../comparator.js');
+=======
+var app = require('../app.js');
+var linkedlist = require('../linkedlist.js');
+var linknode = require('../linknode.js');
+
+>>>>>>> 713beb4b1a66781d0f3a79ad1464897b9920873a
 var assert = require("chai").assert;
 var mocha  = require('mocha');
 var describe = mocha.describe;
 
 
+<<<<<<< HEAD
 describe ('Test settime toTimeString', function(){
     it('toTimeString test with hour, minute, and second', function(){
         var t = new atime();
@@ -46,6 +54,8 @@ describe ('Test add hour ', function(){
 
 });
 
+=======
+>>>>>>> 713beb4b1a66781d0f3a79ad1464897b9920873a
 
 describe('Test linkedlist', function(){
     it('Test constructor', function(){
