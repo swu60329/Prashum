@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for simple\linkedlist.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">simple/</a> linkedlist.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">2.82% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>2/71</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">2.86% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>2/70</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var LinkedListNode = require('./linknode.js');
+var Comparator = require('./comparator.js');
+&nbsp;
+class LinkedList {
+  
+  constructor<span class="fstat-no" title="function not covered" >(comparatorFunction) {</span>
+  
+<span class="cstat-no" title="statement not covered" >    this.head = null;</span>
+<span class="cstat-no" title="statement not covered" >    this.tail = null;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.compare = new Comparator(comparatorFunction);</span>
+  }
+&nbsp;
+  getHead<span class="fstat-no" title="function not covered" >(){</span>
+<span class="cstat-no" title="statement not covered" >    return this.head;</span>
+  }
+&nbsp;
+  getTail<span class="fstat-no" title="function not covered" >(){</span>
+<span class="cstat-no" title="statement not covered" >    return this.tail;</span>
+  }
+  
+  prepend<span class="fstat-no" title="function not covered" >(value) {</span>
+    // Make new node to be a head.
+<span class="cstat-no" title="statement not covered" >    const newNode = new LinkedListNode(value, this.head);</span>
+<span class="cstat-no" title="statement not covered" >    this.head = newNode;</span>
+&nbsp;
+    // If there is no tail yet let's make new node a tail.
+<span class="cstat-no" title="statement not covered" >    if (!this.tail) {</span>
+<span class="cstat-no" title="statement not covered" >      this.tail = newNode;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return this;</span>
+  }
+&nbsp;
+  //TBD
+  append<span class="fstat-no" title="function not covered" >(value) {</span>
+<span class="cstat-no" title="statement not covered" >    const newNode = new LinkedListNode(value);</span>
+&nbsp;
+    // If there is no head yet let's make new node a head.
+<span class="cstat-no" title="statement not covered" >    if (!this.head) {</span>
+<span class="cstat-no" title="statement not covered" >      this.head = newNode;</span>
+      
+<span class="cstat-no" title="statement not covered" >      return this;</span>
+    }
+&nbsp;
+    // Attach new node to the end of linked list.
+<span class="cstat-no" title="statement not covered" >    this.tail.next = newNode;</span>
+<span class="cstat-no" title="statement not covered" >    this.tail = newNode;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return this;</span>
+  }
+&nbsp;
+  // TBD
+  delete<span class="fstat-no" title="function not covered" >(value) {</span>
+<span class="cstat-no" title="statement not covered" >    if (!this.head) {</span>
+<span class="cstat-no" title="statement not covered" >      return null;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    let deletedNode = null;</span>
+&nbsp;
+    // If the head must be deleted then make next node that is differ
+    // from the head to be a new head.
+<span class="cstat-no" title="statement not covered" >    while (this.head &amp;&amp; this.compare.equal(this.head.value, value)) {</span>
+<span class="cstat-no" title="statement not covered" >      deletedNode = this.head;</span>
+<span class="cstat-no" title="statement not covered" >      this.head = this.head.next;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    let currentNode = null;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (currentNode !== null) {</span>
+      // If next node must be deleted then make next node to be a next next one.
+<span class="cstat-no" title="statement not covered" >      while (currentNode.next) {</span>
+<span class="cstat-no" title="statement not covered" >        if (this.compare.equal(currentNode.next.value, value)) {</span>
+<span class="cstat-no" title="statement not covered" >          deletedNode = currentNode.next;</span>
+<span class="cstat-no" title="statement not covered" >          currentNode.next = currentNode.next.next;</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >          currentNode = currentNode.next;</span>
+        }
+      }
+    }
+&nbsp;
+    // Check if tail must be deleted.
+<span class="cstat-no" title="statement not covered" >    if (this.compare.equal(this.tail.value, value)) {</span>
+<span class="cstat-no" title="statement not covered" >      this.tail = currentNode;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return deletedNode;</span>
+  }
+&nbsp;
+ 
+  find<span class="fstat-no" title="function not covered" >(value = undefined ) {</span>
+<span class="cstat-no" title="statement not covered" >    if (this.head) {</span>
+<span class="cstat-no" title="statement not covered" >      return null;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    let currentNode = this.head;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    while (currentNode) {</span>
+    
+      // If value is specified then try to compare by value..
+<span class="cstat-no" title="statement not covered" >      if (value !== undefined &amp;&amp; this.compare.equal(currentNode.value, value)) {</span>
+<span class="cstat-no" title="statement not covered" >        return currentNode;</span>
+      }
+&nbsp;
+  
+<span class="cstat-no" title="statement not covered" >      currentNode = currentNode.next;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return null;</span>
+  }
+&nbsp;
+ 
+ // TBD
+  deleteHead<span class="fstat-no" title="function not covered" >() {</span>
+<span class="cstat-no" title="statement not covered" >    if (!this.head) {</span>
+<span class="cstat-no" title="statement not covered" >      return null;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    const deletedHead = this.head;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (this.head.next) {</span>
+<span class="cstat-no" title="statement not covered" >      this.head = this.head.next;</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      this.tail = null;</span>
+    } 
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return deletedHead;</span>
+  }
+&nbsp;
+  //TBD
+  toArray<span class="fstat-no" title="function not covered" >() {</span>
+<span class="cstat-no" title="statement not covered" >    const nodes = [];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    let currentNode = this.head;</span>
+<span class="cstat-no" title="statement not covered" >    while (currentNode) {</span>
+<span class="cstat-no" title="statement not covered" >      nodes.push(currentNode);</span>
+<span class="cstat-no" title="statement not covered" >      currentNode = null;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return nodes;</span>
+  }
+&nbsp;
+  
+  toLinkString<span class="fstat-no" title="function not covered" >() {</span>
+<span class="cstat-no" title="statement not covered" >    var adata = this.toArray();</span>
+<span class="cstat-no" title="statement not covered" >    return adata.map(node =&gt; <span class="cstat-no" title="statement not covered" >node.toString())</span>.toString();</span>
+  }
+&nbsp;
+&nbsp;
+  reverse<span class="fstat-no" title="function not covered" >() {</span>
+<span class="cstat-no" title="statement not covered" >    let currNode = this.head;</span>
+<span class="cstat-no" title="statement not covered" >    let prevNode = null;</span>
+<span class="cstat-no" title="statement not covered" >    let nextNode = null;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    while (currNode) {</span>
+      // Store next node.
+<span class="cstat-no" title="statement not covered" >      nextNode = currNode.next;</span>
+&nbsp;
+      // Change next node of the current node so it would link to previous node.
+<span class="cstat-no" title="statement not covered" >      currNode.next = prevNode;</span>
+&nbsp;
+      // Move prevNode and currNode nodes one step forward.
+<span class="cstat-no" title="statement not covered" >      prevNode = currNode;</span>
+<span class="cstat-no" title="statement not covered" >      currNode = nextNode;</span>
+      
+    }
+&nbsp;
+    // Reset head and tail.
+<span class="cstat-no" title="statement not covered" >    this.tail = this.head;</span>
+<span class="cstat-no" title="statement not covered" >    this.head = prevNode;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return this;</span>
+  }
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >module.exports  = LinkedList;</span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Mar 22 2020 15:56:14 GMT+0700 (Indochina Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
