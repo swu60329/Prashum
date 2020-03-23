@@ -28,27 +28,27 @@ var server =http.createServer(function(req,res){
   //css page2
   if (req.url === 'css/animate.css') {
     res.writeHead(200, {'Content-type' : 'text/css'});
-    var fileContents = fs.readFileSync('css/animate.css', {encoding: 'utf8'});
+    var fileContents = fs.readFileSync('../css/animate.css', {encoding: 'utf8'});
     res.write(fileContents);
   }
   if (req.url === 'css/bootstrap.css') {
     res.writeHead(200, {'Content-type' : 'text/css'});
-    var fileContents = fs.readFileSync('css/bootstrap.css', {encoding: 'utf8'});
+    var fileContents = fs.readFileSync('../css/bootstrap.css', {encoding: 'utf8'});
     res.write(fileContents);
   }
   if (req.url === 'css/flexslider.css') {
     res.writeHead(200, {'Content-type' : 'text/css'});
-    var fileContents = fs.readFileSync('css/flexslider.css', {encoding: 'utf8'});
+    var fileContents = fs.readFileSync('../css/flexslider.css', {encoding: 'utf8'});
     res.write(fileContents);
   }
   if (req.url === 'css/icomoon.css') {
     res.writeHead(200, {'Content-type' : 'text/css'});
-    var fileContents = fs.readFileSync('css/icomoon.css', {encoding: 'utf8'});
+    var fileContents = fs.readFileSync('../css/icomoon.css', {encoding: 'utf8'});
     res.write(fileContents);
   }
   if (req.url === 'css/style2.css') {
     res.writeHead(200, {'Content-type' : 'text/css'});
-    var fileContents = fs.readFileSync('css/style2.css', {encoding: 'utf8'});
+    var fileContents = fs.readFileSync('../css/style2.css', {encoding: 'utf8'});
     res.write(fileContents);
   }
   
