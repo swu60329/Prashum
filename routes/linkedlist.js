@@ -1,5 +1,5 @@
 var LinkedListNode = require('./linknode.js');
-var Comparator = require('./comparator.js');
+// var Comparator = require('./comparator.js');
 
 class LinkedList {
   
