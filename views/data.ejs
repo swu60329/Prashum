@@ -26,24 +26,25 @@
 
 	
 
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 	
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/animate.css">
 	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="/css/icomoon.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/icomoon.css">
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css">
 	<!-- Flexslider  -->
-	<link rel="stylesheet" href="/css/flexslider.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/flexslider.css">
 	<!-- Theme style  -->
-	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/styledata.css">
 
 	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="javascripts/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -54,14 +55,14 @@
 		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
 
-			<h1 id="fh5co-logo"><a href="้home.html">Type of Coral</a></h1>
+			<h1 id="fh5co-logo"><a href="/">Type of Coral</a></h1>
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
-					<li><a href="home.html">Home</a></li>
-					<li class="fh5co-active"><a href="data.html">Blog</a></li>
-					<li><a href="news.html">News</a></li>
-					<li><a href="contact.html">About</a></li>
-					<li><a href="about.html">Contact</a></li>
+					<li><a href="/">Home</a></li>
+					<li class="fh5co-active"><a href="/data">Blog</a></li>
+					<li><a href="/news">News</a></li>
+					<li><a href="/stay">Stay in Touch</a></li>
+					<li><a href="/about">Contact</a></li>
 				</ul>
 			</nav>
 
@@ -89,8 +90,9 @@
 							<a href="#" class="blog-img"><img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Staghorn-coral-1.jpg" class="img-responsive" alt="staghorn coral"></a>
 							<div class="desc">
 								<h3><a href="#">Staghorn coral</a></h3>
-								<p> ปะการังเขากวาง  -  Staghorn  coral  (Acropora  spp.)  มีรูปแบบเป็นกิ่งแน่นทึบ  สีสันหลากหลาย<span id="dots">...</span><span id="more">ตั้งแต่สีอ่อนไปจนถึงสีเขียวอ่อน  ฟ้า  และสีส้ม  ความหนาอาจมีมากหรือน้อย และมีก้านยาวและเติบโตอย่างรวดเร็วมากกว่าปะการังชนิดอื่นๆ</span></p>
-								<button onclick="myFunction()" id="myBtn">Read more</button>
+								<input type="checkbox" class="read-more-state" id="post-1" />
+								<p class="read-more-wrap"> ปะการังเขากวาง  -  Staghorn  coral  (Acropora  spp.)มีรูปแบบเป็นกิ่งแน่นทึบ  สีสันหลากหลาย<span class="read-more-target">ตั้งแต่สีอ่อนไปจนถึงสีเขียวอ่อน ฟ้าและสีส้มความหนาอาจมีมากหรือน้อยและมีก้านยาวและเติบโตอย่างรวดเร็วมากกว่าปะการังชนิดอื่นๆ</span></p>
+								<label for="post-1" class="read-more-trigger"></label>
 
 							</div>
 						</div>
@@ -100,11 +102,9 @@
 							<a href="#" class="blog-img"><img src="https://lh3.googleusercontent.com/Saltcj9hbXgCon33Pu8CnnqUhpBbBz1qZx3QCSA7gpG_7cWMA2qKq3LVtAZ11KiDFBgtVhW3dO-XlvfhCmyBwQ=s1200" class="img-responsive" alt="Black coral"></a>
 							<div class="desc">
 								<h3><a href="#">Black corale</a></h3>
-								<p>ปะการังกิ่งดำ (Black sun coral) มีโคโลนีเป็นกิ่ง โพลิปและหนวดสีดำอมเขียว ไม่มีสาหร่ายซูแซนเทลลีในเนื้อเยื่อ<span id="dots1">...</span><span id="more1">พบได้ทั่วไปบริเวณใต้กองหินใต้น้ำหรือเรือจม กินแพลงก์ตอนสัตว์ที่ล่องลอยอยู่ในมวลน้ำเป็นอาหาร โดยการยื่นหนวดออกมาจับ</span></p>
-								<button onclick="myFunction()" id="myBtn1">Read more</button>
-								
-								
-								
+								<input type="checkbox" class="read-more-state" id="post-2" />
+								<p class="read-more-wrap">ปะการังกิ่งดำ (Black sun coral) มีโคโลนีเป็นกิ่ง โพลิปและหนวดสีดำอมเขียว ไม่มีสาหร่ายซูแซนเทลลีในเนื้อเยื่อ<span class="read-more-target">พบได้ทั่วไปบริเวณใต้กองหินใต้น้ำหรือเรือจม กินแพลงก์ตอนสัตว์ที่ล่องลอยอยู่ในมวลน้ำเป็นอาหาร โดยการยื่นหนวดออกมาจับ</span></p>
+								<label for="post-2" class="read-more-trigger"></label>	
 							</div>
 						</div>
 					</div>
@@ -113,8 +113,9 @@
 							<a href="#" class="blog-img"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Antipathes_dichotoma2.jpg" class="img-responsive" alt="Antipathes coral"></a>
 							<div class="desc">
 								<h3><a href="#">Antipathes coral</a></h3>
-								<p>Antipathes เป็นประเภทของปะการังตามลำดับ Antipatharia ประกอบด้วยปะการังสีดำ (ดังนั้นชื่อของโครงกระ<span id="dots">...</span><span id="more">ดูกสีดำ)คุณสมบัติที่แตกต่างกันอย่างมากแตกต่างกันอย่างมากในประเภทนี้มันมีการจัดตำแหน่งแบบสมมาตรเช่นเดียวกับแนวปะการังที่มีรูปร่างไม่สม่ำเสมอช่วงของสีที่แตกต่างกันและอาณานิคมที่สามารถแตกแขนงหรืออัดแน่น ติ่งสำหรับปะการังเหล่านี้มีหนวดหกตัวที่เรียงกันด้วยเซลล์ที่กัดแล้ว ซึ่งแตกต่างจากลูกพี่ลูกน้องสร้างแนวปะการังของพวกเขาเหล่านี้ขาดสาหร่ายสังเคราะห์แสงและไม่ จำกัด เฉพาะพื้นที่ผิวเบา พวกเขาชอบอาศัยอยู่ในน้ำลึกใกล้กับกระแสน้ำเพื่อให้สามารถจับและกินแพลงก์ตอนสัตว์ได้</span></p>
-								<button onclick="myFunction()" id="myBtn">Read more</button>
+								<input type="checkbox" class="read-more-state" id="post-3" />
+								<p class="read-more-wrap">Antipathes เป็นประเภทของปะการังตามลำดับ Antipatharia ประกอบด้วยปะการังสีดำ <span class="read-more-target">คุณสมบัติที่แตกต่างกันอย่างมากแตกต่างกันอย่างมากในประเภทนี้มันมีการจัดตำแหน่ง </span></p>
+								<label for="post-3" class="read-more-trigger"></label>
 							</div>
 						</div>
 					</div>
@@ -123,8 +124,9 @@
 							<a href="#" class="blog-img"><img src="https://i.pinimg.com/originals/c0/88/a3/c088a309107b03ba6c7f476ea4d959e3.jpg" class="img-responsive" alt="Elkhorn coral"></a>
 							<div class="desc">
 								<h3><a href="#">Elkhorn coral</a></h3>
-								<p>ปะการังเอลคอร์นเป็นหนึ่งในปะการังที่อุดมสมบูรณ์ที่สุดในทะเลแคริบเบียน ในยุค 70 ถึงต้นยุค 80 ประมาณ 96% ของ<span id="dots">...</span><span id="more">ปะการังคอร์นส่วนใหญ่หายไปเพราะพายุและโรค ปัจจัยที่ทำให้เกิดการสูญเสียประชากร ได้แก่ โรค (ปะการังฟอกขาว) ปล้นสะดมการเติบโตของสาหร่ายความเสียหายจากพายุและกิจกรรมของมนุษย์ ปัจจัยทั้งหมดเหล่านี้เข้าด้วยกันอาจสร้างผลเสริมฤทธิ์กันที่ขัดขวางการอยู่รอดและความสำเร็จในการสืบพันธุ์ของปะการังเอลคอร์น ตั้งแต่ปี 2549 มีสัญญาณของการฟื้นตัวในบางพื้นที่</span></p>
-								<button onclick="myFunction()" id="myBtn">Read more</button>
+								<input type="checkbox" class="read-more-state" id="post-4" />
+								<p class="read-more-wrap">ปะการังเอลคอร์นเป็นหนึ่งในปะการังที่อุดมสมบูรณ์ที่สุดในทะเลแคริบเบียน ในยุค 70 ถึงต้นยุค 80 ประมาณ 96% ของ<span class="read-more-target">ปะการังคอร์นส่วนใหญ่หายไปเพราะพายุและโรค ปัจจัยที่ทำให้เกิดการสูญเสียประชากร ได้แก่ โรค (ปะการังฟอกขาว) </span></p>
+								<label for="post-4" class="read-more-trigger"></label>
 							</div>
 						</div>
 					</div>
@@ -134,9 +136,10 @@
 							<a href="#" class="blog-img"><img src="https://images.unsplash.com/photo-1550016598-add5550c93ac?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" class="img-responsive" alt="Blue coral"></a>
 							<div class="desc">
 								<h3><a href="#">Blue coral</a></h3>
-								<p>ปะการังสีน้ำเงิน (Blue coral) ปะการังสีน้ำเงินจัดอยู่ในพวกเดียวกับปะการังท่อ คอรอลลัมเป็นก้อนและอาจมีส่วนยื่น<span id="dots">...</span><span id="more">ในแนวตั้งฉากเป็นแผ่นหรือเป็นพูช่องรองรับโพลิปกระจัดกระจายกัน ขนาดเส้นผ่าศูนย์กลาง ประมาณ 0.5 มิลลิเมตร</span></p>
+								<input type="checkbox" class="read-more-state" id="post-5" />
+								<p class="read-more-wrap">ปะการังสีน้ำเงิน (Blue coral) ปะการังสีน้ำเงินจัดอยู่ในพวกเดียวกับปะการังท่อ คอรอลลัมเป็นก้อนและอาจมีส่วนยื่น<span class="read-more-target">ในแนวตั้งฉากเป็นแผ่นหรือเป็นพูช่องรองรับโพลิปกระจัดกระจายกัน ขนาดเส้นผ่าศูนย์กลาง ประมาณ 0.5 มิลลิเมตร</span></p>
 								
-								<button onclick="myFunction()" id="myBtn">Read more</button>
+								<label for="post-5" class="read-more-trigger"></label>
 							</div>
 						</div>
 					</div>
@@ -145,8 +148,9 @@
 							<a href="#" class="blog-img"><img src="https://www.caribbean360.com/wp-content/uploads/caribbean-pillar-coral-740.jpg" class="img-responsive" alt="Pillar coral"></a>
 							<div class="desc">
 								<h3><a href="#">Pillar coral</a></h3>
-								<p>เสาปะการังในส่วนอุ่นของมหาสมุทรแอตแลนติกตะวันตกและทะเลแคริบเบียน ภายในระยะของมัน D. cylindrus นั้นพบ<span id="dots">...</span><span id="more">ได้ทั่วไปในบางสถานที่ แต่ไม่ค่อยพบในสถานที่ที่เหมาะสมอื่น ๆ หมู่เกาะบางแห่งในบาฮามาสมีอาณานิคมมากมายเช่นเดียวกับชายฝั่งทางเหนือของจาเมกา มันเคยเป็นเรื่องธรรมดาในแนวปะการังนอกชายฝั่งฟลอริดา แต่ได้รับความทุกข์ทรมานจากการสะสมเกิน ดูเหมือนว่าจะหายไปจากเบอร์มิวดาและชายฝั่งปานามาและโคลัมเบีย มันมักจะเติบโตในระดับหรือส่วนลาดเอียงเล็กน้อยของแนวปะการังที่ระดับความลึกระหว่าง 1 ถึง 20 เมตร </span></p>
-								<button onclick="myFunction()" id="myBtn">Read more</button>
+								<input type="checkbox" class="read-more-state" id="post-6" />
+								<p class="read-more-wrap">เสาปะการังในส่วนอุ่นของมหาสมุทรแอตแลนติกตะวันตกและทะเลแคริบเบียน ภายในระยะของมัน D.cylindrus นั้นพบ<span class="read-more-target">ได้ทั่วไปในบางสถานที่ แต่ไม่ค่อยพบในสถานที่ที่เหมาะสมอื่น ๆ หมู่เกาะบางแห่งในบาฮามาสมีอาณานิคมมากมาย </span></p>
+								<label for="post-6" class="read-more-trigger"></label>
 							</div>
 						</div>
 					</div>
@@ -156,8 +160,9 @@
 							<a href="#" class="blog-img"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Leptosammia_Pruvoti_nella_Grotta_della_Madonnina_Capo_Caccia_Alghero_Sardegna.JPG" class="img-responsive" alt="Sunset Cup coral"></a>
 							<div class="desc">
 								<h3><a href="#">Sunset Cup coral</a></h3>
-								<p>Leptopsammia pruvoti พบได้ในทะเลเมดิเตอร์เรเนียนตะวันตกและทะเลเอเดรียติกและบนชายฝั่งมหาสมุทรแอตแลนติก<span id="dots">...</span><span id="more">ของโปรตุเกส, บริตตานี, หมู่เกาะแชนเนลและอังกฤษตะวันตกเฉียงใต้ เป็นอิสระจากแสงแดดพบภายใต้ก้อนหินบนพื้นหินในรอยแยกใต้ยื่นและในถ้ำที่ระดับความลึกระหว่าง 10 และ 40 เมตร (33 และ 131 ฟุต)</span></p>
-								<button onclick="myFunction()" id="myBtn">Read more</button>
+								<input type="checkbox" class="read-more-state" id="post-7" />
+								<p class="read-more-wrap">Leptopsammia pruvoti พบได้ในทะเลเมดิเตอร์เรเนียนตะวันตกและทะเลเอเดรียติกและบนชายฝั่งมหาสมุทรแอตแลนติก<span class="read-more-target">ของโปรตุเกส, บริตตานี, หมู่เกาะแชนเนลและอังกฤษตะวันตกเฉียงใต้ เป็นอิสระจากแสงแดดพบภายใต้ก้อนหินบนพื้นหินในรอยแยกใต้ยื่น</span></p>
+								<label for="post-7" class="read-more-trigger"></label>
 							</div>
 						</div>
 					</div>
@@ -166,8 +171,9 @@
 							<a href="#" class="blog-img"><img src="http://www.bangburdtour.com/images/column_1276400822/p02-01[1].jpg"  class="img-responsive" alt="SeaPen coral"></a>
 							<div class="desc">
 								<h3><a href="#">Cauliflower Coral </a></h3>
-								<p>ปะการังพุ่มไม้มีคอรอมลัมเป็นช่อคล้ายกิ่งก้านของพุ่มไม้ ตามปรกติกิ่งก้านที่แตกแขนงออกมีลักษณะกลม หรือแบนเล็กน้อย<span id="dots">...</span><span id="more">เมื่อตัดตามขวางแคลไลซ์จะมีขนาดเส้นผ่านศูนย์กลางไม่เกิน 1 มิลลิเมตร เป็นรูปสี่ถึงหกเหลี่ยมคล้ายลายตาข่าย สายพันธุ์ของปะการังที่เกิดขึ้นในมหาสมุทรอินเดียและมหาสมุทรแปซิฟิก ปะการังนี้อาศัยอยู่ในสภาพแวดล้อมแนวปะการังน้ำตื้น</span></p>
-								<button onclick="myFunction()" id="myBtn">Read more</button>
+								<input type="checkbox" class="read-more-state" id="post-8" />
+								<p class="read-more-wrap">ปะการังพุ่มไม้มีคอรอมลัมเป็นช่อคล้ายกิ่งก้านของพุ่มไม้ ตามปรกติกิ่งก้านที่แตกแขนงออกมีลักษณะกลม หรือแบนเล็กน้อย<span class="read-more-target">เมื่อตัดตามขวางแคลไลซ์จะมีขนาดเส้นผ่านศูนย์กลางไม่เกิน 1 มิลลิเมตร เป็นรูปสี่ถึงหกเหลี่ยมคล้ายลายตาข่าย สายพันธุ์ของปะการังที่เกิดขึ้นในมหาสมุทรอินเดียและมหาสมุทรแปซิฟิก </span></p>
+								<label for="post-8" class="read-more-trigger"></label>
 							</div>
 						</div>
 					</div>	
@@ -176,8 +182,9 @@
 							<a href="#" class="blog-img"><img src="http://ourmarinespecies.com/wp-content/uploads/2018/12/sea_pens_2.jpg" class="img-responsive" alt="SeaPen coral"></a>
 							<div class="desc">
 								<h3><a href="#">SeaPen coral</a></h3>
-								<p>ปากกาทะเล (SeaPen coral)เป็นสัตว์ทะเลไม่มีกระดูกสันหลังจำพวกหนึ่ง ที่อยู่ในอันดับ Pennatulacea จัดเป็นแอนโธ<span id="dots">...</span><span id="more">ซัวอย่างหนึ่ง ถูกจัดกลุ่มด้วย octocoralsเพราะมีลักษณะใกล้เคียงกับปะการังอ่อน มีการกระจายทั่วโลกถูกพบในน่านน้ำเขตร้อนและเขตอบอุ่นทั่วโลกรวมทั้งจากน้ำขึ้นน้ำลงไปจนถึงระดับความลึกมากกว่า 6100 เมตร พร้อมกับแส้ทะเลหรือกอร์กอน</span></p>
-								<button onclick="myFunction()" id="myBtn">Read more</button>
+								<input type="checkbox" class="read-more-state" id="post-9" />
+								<p class="read-more-wrap">ปากกาทะเล (SeaPen coral)เป็นสัตว์ทะเลไม่มีกระดูกสันหลังจำพวกหนึ่ง ที่อยู่ในอันดับ Pennatulacea จัดเป็นแอนโธ<span class="read-more-target">ซัวอย่างหนึ่ง ถูกจัดกลุ่มด้วย octocoralsเพราะมีลักษณะใกล้เคียงกับปะการังอ่อน มีการกระจายทั่วโลกถูกพบในน่านน้ำเขตร้อนและเขตอบอุ่นทั่วโลก</span></p>
+								<label for="post-9" class="read-more-trigger"></label>
 							</div>
 						</div>
 					</div>
@@ -186,8 +193,9 @@
 							<a href="#" class="blog-img"><img src="http://www.bangburdtour.com/images/column_1276400822/p02-04[1].jpg" class="img-responsive" alt="Branching Pore Coral"></a>
 							<div class="desc">
 								<h3><a href="#">Branching Pore Coral </a></h3>
-								<p>ปะการังช่อแขนงมีคอรอมลัมลักษณะเป็นช่อ คล้ายปะการังพุ่มไม้ ขนาดกว้างประมาณ 20 เซนติเมตร แคลไลซ์ มีขนาดเส้น<span id="dots">...</span><span id="more">ผ่านศูนย์กลางเล็กกว่า 1 มิลลิเมตร และไม่มีคลอรอไลท์ที่อยู่ปลายยอดเหมือนปะการังเขากวาง ปะการังชนิดนี้เจริญอยู่ในเขตน้ำขึ้นน้ำลงทางด้านในของขอบ พบอยู่ทั่วไปในแนวปะการังของไทย ทั้งอ่าวไทยและฝั่งอันดามัน</span></p>
-								<button onclick="myFunction()" id="myBtn">Read more</button>
+								<input type="checkbox" class="read-more-state" id="post-10" />
+								<p class="read-more-wrap">ปะการังช่อแขนงมีคอรอมลัมลักษณะเป็นช่อ คล้ายปะการังพุ่มไม้ ขนาดกว้างประมาณ 20 เซนติเมตร แคลไลซ์ มีขนาดเส้น<span class="read-more-target">่านศูนย์กลางเล็กกว่า 1 มิลลิเมตร และไม่มีคลอรอไลท์ที่อยู่ปลายยอดเหมือนปะการังเขากวาง ปะการังชนิดนี้เจริญอยู่ในเขตน้ำขึ้นน้ำลงทางด้านในของขอบ </span></p>
+								<label for="post-10" class="read-more-trigger"></label>
 							</div>
 						</div>
 					</div>
@@ -196,8 +204,9 @@
 							<a href="#" class="blog-img"><img src="http://www.bangburdtour.com/images/column_1276400822/p02-05[1].jpg"  class="img-responsive" alt="leaf Coral"></a>
 							<div class="desc">
 								<h3><a href="#">leaf Coral</a></h3>
-								<p>คอรอมลัมมีขนาดคล้ายช่อผักกาดที่บิดไปบิดมา มีโพลิปเจริญดีอยู่ทั้งสองด้านตามขอบเป็นสันคม ขนาดความกว้างของช่อ<span id="dots">...</span><span id="more">ประมาณ 30 เซ็นติเมตร ปรกติมีสีเทา หรือน้ำตาล ปะการังชนิดนี้มีความเปราะบางแตกหักได้ง่าย แต่มีความคมมากหากนักท่องเที่ยวไปสัมผัสอาจจะเป็นแผลได้ ปะการังชนิดนี้พบเจริญอยู่ทั่วไปในแนวปะการังตั้งแต่เขตน้ำขึ้นน้ำลงออกไปทั้งแนวอ่าวไทยและฝั่งอันดามัน และแพร่กระจายทั่วไปแถบอินโดแปซิฟิก</span></p>
-								<button onclick="myFunction()" id="myBtn">Read more</button>
+								<input type="checkbox" class="read-more-state" id="post-11" />
+								<p class="read-more-wrap">คอรอมลัมมีขนาดคล้ายช่อผักกาดที่บิดไปบิดมา มีโพลิปเจริญดีอยู่ทั้งสองด้านตามขอบเป็นสันคม ขนาดความกว้างของช่อ<span class="read-more-target">ประมาณ 30 เซ็นติเมตร ปรกติมีสีเทา หรือน้ำตาล ปะการังชนิดนี้มีความเปราะบางแตกหักได้ง่าย แต่มีความคมมากหากนักท่องเที่ยวไปสัมผัสอาจจะเป็นแผลได้ </span></p>
+								<label for="post-11" class="read-more-trigger"></label>
 							</div>
 						</div>
 					</div>
@@ -206,8 +215,9 @@
 							<a href="#" class="blog-img"><img src="http://www.bangburdtour.com/images/column_1276400822/p02-06[1].jpg"  class="img-responsive" alt="Tombstone Coral"></a>
 							<div class="desc">
 								<h3><a href="#">Tombstone Coral</a></h3>
-								<p>ปะการังตาข่ายมีคอรอมลัมลักษณะเป็นก้อนหรือแผ่คลุมพื้นซากปะการัง แคลไลท์เป็นรูปเหลี่ยมลายตาข่าย โดยมีผนังกั้น<span id="dots">...</span><span id="more">ในแนวรัศมีเรียงกัน 3 ชุด ปกติมักมีสีเหลืองอมเขียว พบเจริญอยู่ในแนวปะการังบางแห่งเป็นจำนวนน้อย แต่สามารถพบได้ทั้งฝั่งอันดามันและอ่าวไทย</span></p>
-								<button onclick="myFunction()" id="myBtn">Read more</button>
+								<input type="checkbox" class="read-more-state" id="post-12" />
+								<p class="read-more-wrap">ปะการังตาข่ายมีคอรอมลัมลักษณะเป็นก้อนหรือแผ่คลุมพื้นซากปะการัง แคลไลท์เป็นรูปเหลี่ยมลายตาข่าย โดยมีผนังกั้น<span class="read-more-target">ในแนวรัศมีเรียงกัน 3 ชุด ปกติมักมีสีเหลืองอมเขียว พบเจริญอยู่ในแนวปะการังบางแห่งเป็นจำนวนน้อย แต่สามารถพบได้ทั้งฝั่งอันดามันและอ่าวไทย</span></p>
+								<label for="post-12" class="read-more-trigger"></label>
 							</div>
 						</div>
 					</div>
@@ -216,8 +226,9 @@
 							<a href="#" class="blog-img"><img src="http://www.bangburdtour.com/images/column_1276400822/p02-07[1].jpg"   class="img-responsive" alt="Cracker Coral"></a>
 							<div class="desc">
 								<h3><a href="#">Cracker Coral</a></h3>
-								<p>ปะการังขนมปังกรอบมีคอรอมลัมลักษณะเป็นช่อซึ่งเกิดจากกิ่งก้านสั้นๆ บิดพับไปมา คอรอลไลท์มีขนาดเล็กกว่า 1 มิลลิเมตร<span id="dots">...</span><span id="more">มองด้วยตาเปล่าเห็นไม่ชัด ปะการังที่มีชีวิตดูคล้ายขนมปังกรอบสีน้ำตาล พบเจริญอยู่ใต้เขตน้ำขึ้นนน้ำลงทั้งในอ่าวไทย และฝั่งทะเลอันดามัน</span></p>
-								<button onclick="myFunction()" id="myBtn">Read more</button>
+								<input type="checkbox" class="read-more-state" id="post-13" />
+								<p class="read-more-wrap">ปะการังขนมปังกรอบมีคอรอมลัมลักษณะเป็นช่อซึ่งเกิดจากกิ่งก้านสั้นๆ บิดพับไปมา คอรอลไลท์มีขนาดเล็กกว่า 1 มิลลิเมตร<span class="read-more-target">มองด้วยตาเปล่าเห็นไม่ชัด ปะการังที่มีชีวิตดูคล้ายขนมปังกรอบสีน้ำตาล พบเจริญอยู่ใต้เขตน้ำขึ้นนน้ำลงทั้งในอ่าวไทย และฝั่งทะเลอันดามัน</span></p>
+								<label for="post-13" class="read-more-trigger"></label>
 							</div>
 						</div>
 					</div>
@@ -226,8 +237,9 @@
 							<a href="#" class="blog-img"><img src="http://www.bangburdtour.com/images/column_1276400822/p02-08[1].jpg"    class="img-responsive" alt="Mushroom Coral"></a>
 							<div class="desc">
 								<h3><a href="#">Mushroom Coral</a></h3>
-								<p>ปะการังเห็ดเป็นปะการังที่อาศัยอยู่แบบเดี่ยว ลักษณะคล้ายดอกเห็ดรูปกลม นับเป็นปะการังที่มีคลอรอลไลท์ใหญ่มาก เส้นผ่าน<span id="dots">...</span><span id="more">ศูนย์กลางประมาณ 20 - 30 เซนติเมตร สันที่จัดเรียงตัวกันในแนวรัศมีเห็น ได้ชัดเจน และอยู่ชิดกันมาก พื้นผิวของดิสก์ในช่องปากของพวกเขาสามารถราบรื่นเป็นหลุมเป็นบ่อหรือเลือนในลักษณะที่ปรากฏ พวกเขามาในหลากหลายสีรวมทั้งสีเขียวสีแดงสีม่วงสีน้ำเงินและสีเทา และอาจเป็นสีทึบมีลายเส้นที่เปล่งประกายออกมาจากจุดศูนย์กลางถูกจุดหรือแม้แต่จุดด่างดำ</span></p>
-								<button onclick="myFunction()" id="myBtn">Read more</button>
+								<input type="checkbox" class="read-more-state" id="post-14" />
+								<p class="read-more-wrap">ปะการังเห็ดเป็นปะการังที่อาศัยอยู่แบบเดี่ยว ลักษณะคล้ายดอกเห็ดรูปกลม นับเป็นปะการังที่มีคลอรอลไลท์ใหญ่มาก เส้นผ่าน<span class="read-more-target">ศูนย์กลางประมาณ 20 - 30 เซนติเมตร สันที่จัดเรียงตัวกันในแนวรัศมีเห็น ได้ชัดเจน และอยู่ชิดกันมาก พื้นผิวของดิสก์ในช่องปากของพวกเขาสามารถราบรื่นเป็นหลุมเป็นบ่อ </span></p>
+								<label for="post-14" class="read-more-trigger"></label>
 							</div>
 						</div>
 					</div>
@@ -236,8 +248,9 @@
 							<a href="#" class="blog-img"><img src="http://www.bangburdtour.com/images/column_1276400822/p02-09[1].jpg"    class="img-responsive" alt="Anemone Coral"></a>
 							<div class="desc">
 								<h3><a href="#">Anemone Coral</a></h3>
-								<p>ปะการังดอกไม้ชนิดนี้โพลิปมักมีสีน้ำตาลหรือเขียว ที่ชอบยืดตัวและบานหนวดออกจับเหยื่อ ในเวลากลางวัน คอรอมลัมมีลัก<span id="dots">...</span><span id="more">ณะเป็นก้อนครึ่งวงกลม และเป็นอิสระจากพื้น ซึ่งถูกหยิบเก็บได้ง่าย ดอกไม้ทะเลสามารถเปลี่ยนรูปร่างได้อย่างมาก คอลัมน์และหนวดนั้นมีแผ่นยาวตามขวางและเป็นแนวขวางของกล้ามเนื้อและสามารถยืดและหดตัวได้รวมถึงงอและบิด หลอดอาหารและ mesenteries สามารถลดระดับลง (กลับด้านในออก) หรือแผ่นปากและหนวดสามารถหดกลับเข้าโดยที่กล้ามเนื้อหูรูดปิดรูรับแสง ในระหว่างกระบวนการนี้หลอดอาหารจะพับตามขวางและน้ำจะถูกระบายออกทางปาก</span></p>
-								<button onclick="myFunction()" id="myBtn">Read more</button>
+								<input type="checkbox" class="read-more-state" id="post-15" />
+								<p class="read-more-wrap">ปะการังดอกไม้ชนิดนี้โพลิปมักมีสีน้ำตาลหรือเขียว ที่ชอบยืดตัวและบานหนวดออกจับเหยื่อ ในเวลากลางวัน คอรอมลัมมีลัก<span class="read-more-target">ณะเป็นก้อนครึ่งวงกลม และเป็นอิสระจากพื้น ซึ่งถูกหยิบเก็บได้ง่าย ดอกไม้ทะเลสามารถเปลี่ยนรูปร่างได้อย่างมาก คอลัมน์และหนวดนั้นมีแผ่นยาวตามขวางและเป็นแนวขวาง </span></p>
+								<label for="post-15" class="read-more-trigger"></label>
 							</div>
 						</div>
 					</div>
@@ -246,8 +259,9 @@
 							<a href="#" class="blog-img"><img src="http://www.bangburdtour.com/images/column_1276400822/p02-10[1].jpg"    class="img-responsive" alt="Hump Coral"></a>
 							<div class="desc">
 								<h3><a href="#">Hump Coral </a></h3>
-								<p>คอรอมลัมมีลักษณะเป็นก้อนขนากฬหญ่คล้ายโขดหิน บางครั้งอาจมีลักษณะเป็นรูปวงแหวน หรือรูปเกือกม้า เนื่องจากโพลิป<span id="dots">...</span><span id="more">ส่วนบนที่โผล่พ้นน้ำตายลง และมีการทับถมของตะกอนทำให้สาหร่าย หรือฟองน้ำเจริญขึ้นแทน ส่วนโพลิปที่อยู่ทางด้านข้าง สามารถเจริญขยายออกไปได้เรื่อยๆ ทำให้ดูคล้ายแนวปะการังแบบวงแหวนขนาดเล็ก</span></p>
-								<button onclick="myFunction()" id="myBtn">Read more</button>
+								<input type="checkbox" class="read-more-state" id="post-16" />
+								<p class="read-more-wrap">คอรอมลัมมีลักษณะเป็นก้อนขนากฬหญ่คล้ายโขดหิน บางครั้งอาจมีลักษณะเป็นรูปวงแหวน หรือรูปเกือกม้า เนื่องจากโพลิป<span class="read-more-target">ส่วนบนที่โผล่พ้นน้ำตายลง และมีการทับถมของตะกอนทำให้สาหร่าย หรือฟองน้ำเจริญขึ้นแทน ส่วนโพลิปที่อยู่ทางด้านข้าง สามารถเจริญขยายออกไปได้เรื่อยๆ </span></p>
+								<label for="post-16" class="read-more-trigger"></label>
 							</div>
 						</div>
 					</div>
@@ -256,8 +270,9 @@
 							<a href="#" class="blog-img"><img src="http://www.bangburdtour.com/images/column_1276400822/p02-11[1].jpg"    class="img-responsive" alt="Knobbed Hump Coral"></a>
 							<div class="desc">
 								<h3><a href="#">Knobbed Hump Coral</a></h3>
-								<p>ปะการังสมองมีคอรอลไลท์เป็นก้อนคล้ายสมองเนื่องจากบริเวณผิวมีส่วนนูน แคลไลซ์มีขนาดเส้นผ่าศูนย์กลาง ประมาณ<span id="dots">...</span><span id="more">1.5 มิลลิเมตร และคอรอลไลท์กว้างประมาณ 30 เซนติเมตรพื้นผิวมีสีเทาอมน้ำตาล บางก้อนมีขนาดใหญ่มากๆ ซึ่งอาจจะมีขนาดเท่ารถยนต์ และมีอายุหลายร้อยปี พอได้มากโดยทั่วไป สามารถพบเห็นได้ที่เกาะทะลุและเกาะสิงห์ จ.ประจวบคีรีขันธ์</span></p>
-								<button onclick="myFunction()" id="myBtn">Read more</button>
+								<input type="checkbox" class="read-more-state" id="post-17" />
+								<p class="read-more-wrap">ปะการังสมองมีคอรอลไลท์เป็นก้อนคล้ายสมองเนื่องจากบริเวณผิวมีส่วนนูน แคลไลซ์มีขนาดเส้นผ่าศูนย์กลาง ประมาณ<span class="read-more-target">1.5 มิลลิเมตร และคอรอลไลท์กว้างประมาณ 30 เซนติเมตรพื้นผิวมีสีเทาอมน้ำตาล บางก้อนมีขนาดใหญ่มากๆ ซึ่งอาจจะมีขนาดเท่ารถยนต์ และมีอายุหลายร้อยปี </span></p>
+								<label for="post-17" class="read-more-trigger"></label>
 							</div>
 						</div>
 					</div>
@@ -266,8 +281,9 @@
 							<a href="#" class="blog-img"><img src="http://www.bangburdtour.com/images/column_1276400822/p02-12[1].jpg"    class="img-responsive" alt="Ringed Favid Coral"></a>
 							<div class="desc">
 								<h3><a href="#">Ringed Favid Coral</a></h3>
-								<p>ปะการังแหวนมีคอรอลลัมเป็นก้อนขนาดเล็ก มักมีเส้นผ่านศูนย์กลางไม่เกิน 20 เช็นติเมตร แคลไลซ์มีเส้นผ่านศูนย์กลาง<span id="dots">...</span><span id="more">ประมาณ 13 มิลลิเมตร ผนังกั้นรอบแคลไลท์เป็นรูปวงกลม หรือกลมรีคล้ายวงแหวนและมีร่องแบ่งระหว่าง ผนังแคลไลซ์ชัดเจน ขณะมีชีวิตมักมีสีเขียว หรือน้ำตาล ปะการังชนิดนี้พบได้บ่อยตามแนวปะการังทั่วไป ทั้งในอ่าวไทยและฝั่งทะเลอันดามัน โดยเจริญอยู่ใน เขตน้ำขึ้นน้ำลง</span></p>
-								<button onclick="myFunction()" id="myBtn">Read more</button>
+								<input type="checkbox" class="read-more-state" id="post-18" />
+								<p class="read-more-wrap">ปะการังแหวนมีคอรอลลัมเป็นก้อนขนาดเล็ก มักมีเส้นผ่านศูนย์กลางไม่เกิน 20 เช็นติเมตร แคลไลซ์มีเส้นผ่านศูนย์กลาง<span class="read-more-target">ประมาณ 13 มิลลิเมตร ผนังกั้นรอบแคลไลท์เป็นรูปวงกลม หรือกลมรีคล้ายวงแหวนและมีร่องแบ่งระหว่าง ผนังแคลไลซ์ชัดเจน ขณะมีชีวิตมักมีสีเขียว หรือน้ำตาล </span></p>
+								<label for="post-18" class="read-more-trigger"></label>
 							</div>
 						</div>
 					</div>
@@ -276,8 +292,9 @@
 							<a href="#" class="blog-img"><img src="http://www.bangburdtour.com/images/column_1276400822/p02-13[1].jpg"    class="img-responsive" alt="Favites Coral"></a>
 							<div class="desc">
 								<h3><a href="#">Favites Coral</a></h3>
-								<p>ปะการังผึ้งมีคอรอลลัมมีรูปร่างหลายแบบ แจมีลักษณะเป็นก้อน เป็นช่อหรือแผ่คลุมซากปะการัง แคลไลซ์ส่วนใหญ่<span id="dots">...</span><span id="more">เป็นรูป 5 - 6 เหลี่ยม จนถึงรูปวงกลม สันที่จัดเรียงตัวตามแนวรัศมียื่นเข้าไปตรงกลางเป็นหน้าผา ผนังกั้นระหว่าง แคลไลซ์ใช้ร่วมกับแคลไลซ์ข้างเคียงซึ่งต่างจากปะการังแหวนสกุล favia ที่ผนังกั้นแยกกัน ขนาดเส้นผ่านศูนย์กลาง ของแคลไลซ์ประมาณ 8 มิลลิเมตร ปกติมักมีสีเขียวคล้ำหรือน้ำตาลเข้ม ปะการังชนิดนี้เป็นชนิดที่พบได้บ่อยมากในแนวปะการังทั่วไป และมีการแพร่กระจายตั้งแต่ทะเลแดง ถึงออสเตรเลีย</span></p>
-								<button onclick="myFunction()" id="myBtn">Read more</button>
+								<input type="checkbox" class="read-more-state" id="post-19" />
+								<p class="read-more-wrap">ปะการังผึ้งมีคอรอลลัมมีรูปร่างหลายแบบ แจมีลักษณะเป็นก้อน เป็นช่อหรือแผ่คลุมซากปะการัง แคลไลซ์ส่วนใหญ่<span class="read-more-target">เป็นรูป 5 - 6 เหลี่ยม จนถึงรูปวงกลม สันที่จัดเรียงตัวตามแนวรัศมียื่นเข้าไปตรงกลางเป็นหน้าผา ผนังกั้นระหว่าง แคลไลซ์ใช้ร่วมกับแคลไลซ์</span></p>
+								<label for="post-19" class="read-more-trigger"></label>
 							</div>
 						</div>
 					</div>
@@ -286,8 +303,9 @@
 							<a href="#" class="blog-img"><img src="http://www.bangburdtour.com/images/column_1276400822/p02-14[1].jpg"    class="img-responsive" alt="Golden Star Coral"></a>
 							<div class="desc">
 								<h3><a href="#">Golden Star Coral</a></h3>
-								<p>คอรอลลัมลักษณะเป็นก้อน หรือแผ่ขยายคลุมพื้นออกไปทางด้านข้าง แคลไลซ์มีรูปร่างหลายเหลี่ยม หรือเกือบกลม<span id="dots">...</span><span id="more">ขนาดเส้นผ่าศูนย์กลางประมาณ 8 - 15 มิลลิเมตร ผนังกั้นรอบแคลไลซ์มีสันในแนวรัศมีเห็นได้ชัดเจน ทำให้เต่ละโพลิปมีขนาดคล้ายดาวและมีเนื้อเยื่อสีเหลืองทอง ปะการังชนิดนี้พบอยู่ในเขตใกล้ระดับน้ำลงต่ำสุดและลึกลงไป สามารถพบได้ที่เกาะทะลุ ซึ่งที่เกาะทะลุ จะมีทั้งสีน้ำตาลและสีแดง</span></p>
-								<button onclick="myFunction()" id="myBtn">Read more</button>
+								<input type="checkbox" class="read-more-state" id="post-20" />
+								<p class="read-more-wrap">คอรอลลัมลักษณะเป็นก้อน หรือแผ่ขยายคลุมพื้นออกไปทางด้านข้าง แคลไลซ์มีรูปร่างหลายเหลี่ยม หรือเกือบกลม<span class="read-more-target">ขนาดเส้นผ่าศูนย์กลางประมาณ 8 - 15 มิลลิเมตร ผนังกั้นรอบแคลไลซ์มีสันในแนวรัศมีเห็นได้ชัดเจน ทำให้เต่ละโพลิปมีขนาดคล้ายดาวและมีเนื้อเยื่อสีเหลืองทอง </span></p>
+								<label for="post-20" class="read-more-trigger"></label>
 							</div>
 						</div>
 					</div>
@@ -296,6 +314,9 @@
 		
 			
 		</div>
+		
+			
+		
 	</div>
 	<script>
 		function myFunction() {
@@ -317,19 +338,19 @@
 		</script>
 
 	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
+	<script src="javascripts/jquery.min.js"></script>
 	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="javascripts/jquery.waypoints.min.js"></script>
 	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="javascripts/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="javascripts/bootstrap.min.js"></script>
 	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="javascripts/jquery.flexslider-min.js"></script>
 	
 	
 	<!-- MAIN JS -->
-	<script src="js/main.js"></script>
+	<script src="javascripts/main.js"></script>
 
 	</body>
 </html>
