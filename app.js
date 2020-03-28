@@ -4,12 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-//add by pulipach
-// var linkedlist = require('./routes/linkedlist.js');
-// var dataInfo = require('./class/info.js');
-
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var dataRouter = require('./routes/data');
 var newsRouter = require('./routes/news');
 var stayRouter = require('./routes/stay');
@@ -27,7 +22,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/data', dataRouter);
 app.use('/news', newsRouter);
 app.use('/stay', stayRouter);

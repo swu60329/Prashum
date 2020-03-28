@@ -13,10 +13,9 @@ router.get('/', function(req, res, next) {
 });
 
 
-
-  router.post('/',[
-    check("email","Please Input your Email").not().isEmpty(),
-    check("name","Please Input your Name").not().isEmpty() 
+router.post('/',[
+    check('email',"Please Input your Email").not().isEmpty(),
+    check('name',"Please Input your Name").not().isEmpty() 
   ], function(req, res, next) {
     const result = validationResult(req);   //check
     var errors=result.errors;
