@@ -2,16 +2,10 @@ var express = require('express');
 var router = express.Router();
 const { check, validationResult } = require('express-validator');
 
-
-
 var linkedlist = require('./linkedlist.js');
-
-
-
 
 var node_email;
 var node_name;
-
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
