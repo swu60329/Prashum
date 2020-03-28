@@ -116,10 +116,18 @@
       </iframe>
 		  </div>
           
+      <!-- <%- include layout %>   -->
       <div class="form-popup" id="myForm">
+        <!-- <% if(locals.errors){ %>
+          <ul class="alert alert-danger">
+          <% Object.values(errors).forEach(function(error){ %>
+             <li><%= error.msg %></li>
+          <% }%>
+          </ul>
+          く% } %> -->
          <form action="/ThankYou" class="form-container" method="POST">
            <h4>Stay in Touch</h4>
-       
+           
            <label for="email"><b>Email</b></label>
            <input type="text" placeholder="Enter Email" name="email" required>
        
