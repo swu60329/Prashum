@@ -24,18 +24,11 @@ router.post('/',[
     }else{
       node_email = req.body.email ;
       node_name = req.body.name ;
-<<<<<<< HEAD
-=======
     
       var info = [req.body.email,req.body.name];
       res.send(info);
     }
- //  console.log(info);
->>>>>>> c60569
 
-      var info = [req.body.email,req.body.name];
-      res.send(info);
-    }
 
 });
 
