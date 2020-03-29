@@ -30,7 +30,12 @@ router.post('/',[
       var info = [req.body.email,req.body.name];
 
       node.append(info);
-      res.send(node.getHead().toString());
+      var getData=node.getHead().toString()
+
+      var ul = "<ul id='listname'>" ;
+      ul += "<li>"+ getData +"</li>";
+      
+      res.render('index', {errors:errors});
     }
 
 
