@@ -11,9 +11,8 @@ var node =new linkedlist();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index');
 });
-
 
 router.post('/',[
     check('email',"Please Input your Email").not().isEmpty(),
@@ -26,19 +25,25 @@ router.post('/',[
     }else{
       node_email = req.body.email ;
       node_name = req.body.name ;
-    
-      var info = [req.body.email,req.body.name];
 
-      node.append(info);
-      var getData=node.getHead().toString()
+      node.prepend(node_name);
 
-      var ul = "<ul id='listname'>" ;
-      ul += "<li>"+ getData +"</li>";
-      
-      res.render('index', {errors:errors});
+      res.render('index');
     }
-
 
 });
 
+router.get('/ThankYou',function(req,res,next){
+  // var data=node.getHead().toString(); 
+  // var preData = node.find(data); 
+  //   if (preData){
+  //     var prvData = preData.reverse().toLinkString();
+  //     res.send(data+prvData);
+  //   }else{
+  //     res.send(data);
+  //   }
+  res.send(node.toArray());
+  
+});
+      
 module.exports = router;
