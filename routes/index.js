@@ -7,6 +7,8 @@ var linkedlist = require('./linkedlist.js');
 var node_email;
 var node_name;
 
+var node =new linkedlist();
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -26,7 +28,9 @@ router.post('/',[
       node_name = req.body.name ;
     
       var info = [req.body.email,req.body.name];
-      res.send(info);
+
+      node.append(info);
+      res.send(node.getHead().toString());
     }
 
 
