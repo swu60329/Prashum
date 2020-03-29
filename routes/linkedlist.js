@@ -3,12 +3,12 @@ var LinkedListNode = require('./linknode.js');
 
 class LinkedList {
   
-  constructor(comparatorFunction) {
+  constructor() {
   
     this.head = null;
     this.tail = null;
 
-    this.compare = new Comparator(comparatorFunction);
+    // this.compare = new Comparator(comparatorFunction);
   }
 
   getHead(){
