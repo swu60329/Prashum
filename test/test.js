@@ -1,7 +1,7 @@
 
 var app = require('../app.js');
-var linkedlist = require('../linkedlist.js');
-var linknode = require('../linknode.js');
+var linkedlist = require('../routes/linkedlist.js');
+var linknode = require('../routes/linknode.js');
 
 
 var assert = require("chai").assert;
