@@ -22,16 +22,13 @@ router.post('/',[
     if (!result.isEmpty()) {
       res.render('index', {errors:errors});
     }else{
-      //insert to db
+      node_email = req.body.email ;
+      node_name = req.body.name ;
+    
+      var info = [req.body.email,req.body.name];
+      res.send(info);
     }
- 
-  node_email = req.body.email ;
-  node_name = req.body.name ;
-
-  var info = [req.body.email,req.body.name];
-  res.send(info);
-
-//  console.log(info);
+ //  console.log(info);
 
 
 });
