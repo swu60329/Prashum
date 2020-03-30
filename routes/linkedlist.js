@@ -1,14 +1,14 @@
 var LinkedListNode = require('./linknode.js');
-// var Comparator = require('./comparator.js');
+var Comparator = require('./comparator.js');
 
 class LinkedList {
   
-  constructor() {
+  constructor(comparatorFunction) {
   
     this.head = null;
     this.tail = null;
 
-    // this.compare = new Comparator(comparatorFunction);
+    this.compare = new Comparator(comparatorFunction);
   }
 
   getHead(){
@@ -87,7 +87,6 @@ class LinkedList {
 
     return deletedNode;
   }
-
  
   find(value) {
     if (!this.head) {

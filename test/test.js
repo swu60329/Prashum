@@ -15,7 +15,6 @@ describe('Test linkedlist', function(){
         var linklist = new linkedlist();
     });
 
-
     it('Test prepend', function(){
         var linklist = new linkedlist();
         linklist.prepend("1");
@@ -87,14 +86,14 @@ describe('Test linkedlist', function(){
         linklist.delete("1");
     });
 
-    it('Test delete (Head must be deleted)',function(){
+    it('Test delete (Head)',function(){
         var linklist = new linkedlist();
         linklist.prepend(1);
         linklist.prepend(2);
         linklist.delete(2);
     });
 
-    it('Test delete (Tail must be deleted)', function(){
+    it('Test delete (Tail)', function(){
         var linklist = new linkedlist();
         linklist.prepend(1);
         linklist.delete(1);
