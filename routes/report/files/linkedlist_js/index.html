@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - linkedlist.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">Report Home</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>linkedlist.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
+      <p class="stat">68.16</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">176</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
+      <p class="stat">45.64</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
+      <p class="stat">0.79</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">Function weight</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">By Complexity <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="This metric counts the number of distinct paths through a block of code. Lower values are better." data-original-title="Cyclomatic Complexity" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">By SLOC  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">var LinkedListNode = require(&#039;./linknode.js&#039;);
+var Comparator = require(&#039;./comparator.js&#039;);
+
+class LinkedList {
+  
+  constructor(comparatorFunction) {
+  
+    this.head = null;
+    this.tail = null;
+
+    this.compare = new Comparator(comparatorFunction);
+  }
+
+  getHead(){
+    return this.head;
+  }
+
+  getTail(){
+    return this.tail;
+  }
+  
+  prepend(value) {
+    // Make new node to be a head.
+    const newNode = new LinkedListNode(value, this.head);
+    this.head = newNode;
+
+    // If there is no tail yet let&#039;s make new node a tail.
+    if (!this.tail) {
+      this.tail = newNode;
+    }
+
+    return this;
+  }
+
+  //TBD
+  append(value) {
+    const newNode = new LinkedListNode(value);
+
+    // If there is no head yet let&#039;s make new node a head.
+    if (!this.head) {
+      this.head = newNode;
+      
+      return this;
+    }
+
+    // Attach new node to the end of linked list.
+    this.tail.next = newNode;
+    this.tail = newNode;
+
+    return this;
+  }
+
+  // TBD
+  delete(value) {
+    if (!this.head) {
+      return null;
+    }
+
+    let deletedNode = null;
+
+    // If the head must be deleted then make next node that is differ
+    // from the head to be a new head.
+    while (this.head &amp;&amp; this.compare.equal(this.head.value, value)) {
+      deletedNode = this.head;
+      this.head = this.head.next;
+    }
+
+
+    let currentNode = this.head;
+
+    if (currentNode !== null) {
+      // If next node must be deleted then make next node to be a next next one.
+      while (currentNode.next) {
+        if (this.compare.equal(currentNode.next.value, value)) {
+          deletedNode = currentNode.next;
+          currentNode.next = currentNode.next.next;
+        } else {
+          currentNode = currentNode.next;
+        }
+      }
+    }
+
+    // Check if tail must be deleted.
+    if (this.compare.equal(this.tail.value, value)) {
+      this.tail = currentNode;
+    }
+
+    return deletedNode;
+  }
+ 
+  find(value) {
+    if (!this.head) {
+      return null;
+    }
+
+    let currentNode = this.head;
+
+    while (currentNode) {
+    
+      // If value is specified then try to compare by value..
+      if (value !== undefined &amp;&amp; this.compare.equal(currentNode.value, value)) {
+        return currentNode;
+      }
+
+  
+      currentNode = currentNode.next;
+    }
+    
+    return null;
+  }
+
+ 
+ // TBD
+  deleteHead() {
+    if (!this.head) {
+      return null;
+    }
+
+    const deletedHead = this.head;
+
+    if (this.head.next) {
+      this.head = this.head.next;
+    } else {
+      this.tail = null;
+    } 
+
+    return deletedHead;
+  }
+
+  //TBD
+  toArray() {
+    const nodes = [];
+
+    let currentNode = this.head;
+    while (currentNode) {
+      nodes.push(currentNode);
+      currentNode = null;
+    }
+
+    return nodes;
+  }
+
+  
+  toLinkString() {
+    var adata = this.toArray();
+    return adata.map(node =&gt; node.toString()).toString();
+  }
+
+
+  reverse() {
+    let currNode = this.head;
+    let prevNode = null;
+    let nextNode = null;
+
+    while (currNode) {
+      // Store next node.
+      nextNode = currNode.next;
+
+      // Change next node of the current node so it would link to previous node.
+      currNode.next = prevNode;
+
+      // Move prevNode and currNode nodes one step forward.
+      prevNode = currNode;
+      currNode = nextNode;
+      
+    }
+
+    // Reset head and tail.
+    this.tail = this.head;
+    this.head = prevNode;
+
+    return this;
+  }
+}
+
+module.exports  = LinkedList;</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ cyclomatic }} <br>
+    Length : {{ halstead.length }} <br>
+    Difficulty : {{ halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>

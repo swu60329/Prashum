@@ -18,6 +18,7 @@ router.post('/',[
     check('email',"Please Input your Email").not().isEmpty(),
     check('name',"Please Input your Name").not().isEmpty() 
   ], function(req, res, next) {
+    console.time("settime");
     const result = validationResult(req);   //check
     var errors=result.errors;
     if (!result.isEmpty()) {
@@ -30,6 +31,7 @@ router.post('/',[
 
       res.render('index');
     }
+    console.timeEnd("settime");
 
 });
 
