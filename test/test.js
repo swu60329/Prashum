@@ -2,6 +2,7 @@
 var app = require('../app.js');
 var linkedlist = require('../routes/linkedlist.js');
 var linknode = require('../routes/linknode.js');
+var comparator = require('../routes/comparator.js');
 
 
 var assert = require("chai").assert;
@@ -118,11 +119,26 @@ describe('Test linkedlist', function(){
 
 });
 
-// describe('Test comparator', function(){
+ describe('Test comparator', function(){
 
-//     it('Test constructor', function(){
-//         var 
-//     });
+    it('Test less than', function(){
+         var comp = new comparator();
+         comp.lessThan(2,3);
+     });
+     it('Test greater than', function(){
+        var comp = new comparator();
+        comp.greaterThan(2,3);
+    });
+    it('Test less than or equal', function(){
+        var comp = new comparator();
+        comp.lessThanOrEqual(2,3);
+        comp.lessThanOrEqual(2,2);
+    });
+    it('Test greater than or equal', function(){
+        var comp = new comparator();
+        comp.greaterThanOrEqual(2,3);
+        comp.greaterThanOrEqual(2,2);
+    });
 
-// });
+ });
 
