@@ -82,8 +82,8 @@
        <div class="topnav" id="myTopnav">
 	        
                  <a href="/" >Home</a>
-                 <a href="/data" >Blog</a>
-                 <a href="/news">News</a>
+                 <a href="/data" onclick="blogClick()">Blog</a>
+                 <a href="/news" onclick="newsClick()">News</a>
                  <button class="open-button" onclick="openForm()">STAY IN TOUCH</button>
                  <a href="/about">About</a>
                  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -156,7 +156,19 @@
        function closeForm() {
          document.getElementById("myForm").style.display = "none";
         }
-       </script>       		  
+
+        var bclicks = 0;
+        function blogClick() {
+            document.getElementById('bclicked').value = ++bclicks;
+        }
+
+        var nclicks = 0;
+        function newsClick() {
+            document.getElementById('nclicked').value = ++nclicks;
+        }
+
+
+       </script>       
     </footer>   
 	
   </header>  
