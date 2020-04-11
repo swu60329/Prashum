@@ -47,5 +47,15 @@ router.get('/ThankYou',function(req,res,next){
   res.send(node.toArray());
   
 });
+
+var bclicks = 0;
+function blogClick() {
+  document.getElementById('bclicked').value = ++bclicks;
+}
+
+var nclicks = 0;
+function newsClick() {
+  document.getElementById('nclicked').value = ++nclicks;
+}
       
 module.exports = router;
