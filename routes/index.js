@@ -44,7 +44,9 @@ router.get('/ThankYou',function(req,res,next){
   //   }else{
   //     res.send(data);
   //   }
-  res.send(node.toArray());
+  var name_ary = ["name list"];
+  name_ary.push(node.toLinkString());
+  res.send(name_ary);
   
 });
 
