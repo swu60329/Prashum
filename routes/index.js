@@ -6,6 +6,7 @@ var linkedlist = require('./linkedlist.js');
 
 var node_email;
 var node_name;
+var name_ary = ["name list"];
 
 var node =new linkedlist();
 
@@ -35,11 +36,8 @@ router.post('/',[
 });
 
 router.get('/ThankYou',function(req,res,next){
-  var name_ary = ["name list"];
-  // var one_name = node.toArray();
-  name_ary.push(node);
+  name_ary.push(node.toLinkString());
   res.send(name_ary);
-  
 });
 
 var bclicks = 0;
