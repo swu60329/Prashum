@@ -26,7 +26,6 @@ router.post('/',[
     }else{
       node_email = req.body.email ;
       node_name = req.body.name ;
-
       node.prepend(node_name);
 
       res.render('index');
@@ -36,16 +35,9 @@ router.post('/',[
 });
 
 router.get('/ThankYou',function(req,res,next){
-  // var data=node.getHead().toString(); 
-  // var preData = node.find(data); 
-  //   if (preData){
-  //     var prvData = preData.reverse().toLinkString();
-  //     res.send(data+prvData);
-  //   }else{
-  //     res.send(data);
-  //   }
   var name_ary = ["name list"];
-  name_ary.push(node.toLinkString());
+  // var one_name = node.toArray();
+  name_ary.push(node);
   res.send(name_ary);
   
 });

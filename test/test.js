@@ -14,6 +14,7 @@ var describe = mocha.describe;
 describe('Test linkedlist', function(){
     it('Test constructor', function(){
         var linklist = new linkedlist();
+        assert.strictEqual(linklist.toLinkString(), '');
     });
 
     it('Test prepend', function(){
@@ -21,11 +22,13 @@ describe('Test linkedlist', function(){
         linklist.prepend("1");
         linklist.append("2");
         linklist.prepend("3");
+        assert.strictEqual(linklist.toLinkString(), '3');
     });
 
     it('Test append without head',function(){
         var linklist = new linkedlist();
         linklist.append('1');
+        assert.strictEqual(linklist.toLinkString(), '1');
     });
 
     it('Test deleteHead', function(){
@@ -36,31 +39,37 @@ describe('Test linkedlist', function(){
         linklist.prepend("2");
         linklist.prepend("3");
         linklist.deleteHead();
+        assert.strictEqual(linklist.toLinkString(), '2');
     });
 
     it('Test getHead', function(){
         var linklist = new linkedlist();
-        linklist.prepend("Test getHead()");
+        linklist.prepend("1");
         var foo = linklist.getHead();
-  
+        assert.equal(foo,1);
+
     });
 
     it('Test getTail', function(){
         var linklist = new linkedlist();
-        linklist.getTail();
+        linklist.prepend('1');
+        linklist.append('2');
+        var foo = linklist.getTail();
+        assert.equal(foo, 2);
     });
 
     it('Test toArray', function(){
         var linklist = new linkedlist();
         linklist.prepend("1");
-        var arrayofData = linklist.toArray();
-     
+        assert.equal(linklist.toArray()[0],"1");
+
     });
 
     it('Test toString', function(){
         var linklist = new linkedlist();
         linklist.prepend(20);
         var someString = linklist.toLinkString(20);
+        assert.strictEqual(someString, '20');
     });
 
     it('Test reverse', function(){
@@ -69,6 +78,7 @@ describe('Test linkedlist', function(){
         linklist.prepend(2);
         linklist.prepend(3);
         linklist.reverse();
+        assert.strictEqual(linklist.toLinkString(), '1');
   
     });
 
@@ -85,6 +95,7 @@ describe('Test linkedlist', function(){
     it('Test delete (No data to deleted)', function(){
         var linklist = new linkedlist();
         linklist.delete("1");
+        assert.strictEqual(linklist.toLinkString(), '');
     });
 
     it('Test delete (Head)',function(){
@@ -92,12 +103,14 @@ describe('Test linkedlist', function(){
         linklist.prepend(1);
         linklist.prepend(2);
         linklist.delete(2);
+        assert.strictEqual(linklist.toLinkString(), '1');
     });
 
     it('Test delete (Tail)', function(){
         var linklist = new linkedlist();
         linklist.prepend(1);
         linklist.delete(1);
+        assert.strictEqual(linklist.toLinkString(), '');
     });
 
     it('Test delete next node', function(){
@@ -106,6 +119,8 @@ describe('Test linkedlist', function(){
         linklist.append(2);
         linklist.append(3);
         linklist.delete(2);
+        assert.equal(linklist.getHead(),1);
+        assert.equal(linklist.getTail(),3);
     });
 
     it('Test find method', function(){
@@ -113,8 +128,8 @@ describe('Test linkedlist', function(){
         linklist.find();
         linklist.prepend(1);
         linklist.append(2);
-        linklist.find(2);
-        linklist.find(5);
+        var test_find = linklist.find(2);
+        assert.equal(test_find, 2);
     });
 
 });
