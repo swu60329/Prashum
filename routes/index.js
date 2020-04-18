@@ -28,6 +28,8 @@ router.post('/',[
       node_email = req.body.email ;
       node_name = req.body.name ;
       node.prepend(node_name);
+      console.log(bclicks);
+      console.log(nclicks);
 
       res.render('index');
     }
@@ -39,15 +41,14 @@ router.get('/ThankYou',function(req,res,next){
   name_ary.push(node.toLinkString());
   res.send(name_ary);
 });
+//count click on blog and news
+// var bclicks = 0;
+// function blogClick() {
+//   bclicks += 1 ;
+// }
 
-var bclicks = 0;
-function blogClick() {
-  document.getElementById('bclicked').value = ++bclicks;
-}
-
-var nclicks = 0;
-function newsClick() {
-  document.getElementById('nclicked').value = ++nclicks;
-}
-      
+// var nclicks = 0;
+// function newsClick() {
+//   nclicks += 1 ;
+// }      
 module.exports = router;
