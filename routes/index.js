@@ -3,6 +3,10 @@ var router = express.Router();
 const { check, validationResult } = require('express-validator');
 
 var linkedlist = require('./linkedlist.js');
+var count = require('./count.js');
+
+var b = count.bclicks;
+var n = count.nclicks;
 
 var node_email;
 var node_name;
@@ -28,8 +32,7 @@ router.post('/',[
       node_email = req.body.email ;
       node_name = req.body.name ;
       node.prepend(node_name);
-      console.log(bclicks);
-      console.log(nclicks);
+      name_ary.push(node.toLinkString());
 
       res.render('index');
     }
@@ -38,17 +41,11 @@ router.post('/',[
 });
 
 router.get('/ThankYou',function(req,res,next){
-  name_ary.push(node.toLinkString());
   res.send(name_ary);
 });
-//count click on blog and news
-// var bclicks = 0;
-// function blogClick() {
-//   bclicks += 1 ;
-// }
-
-// var nclicks = 0;
-// function newsClick() {
-//   nclicks += 1 ;
-// }      
+// count click on blog and news
+      
+router.post('/count',function(req,res,next){
+  res.send(b);
+});
 module.exports = router;
