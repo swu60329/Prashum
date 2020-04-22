@@ -3,10 +3,6 @@ var router = express.Router();
 const { check, validationResult } = require('express-validator');
 
 var linkedlist = require('./linkedlist.js');
-var count = require('./count.js');
-
-var b = count.bclicks;
-var n = count.nclicks;
 
 var node_email;
 var node_name;
@@ -42,10 +38,5 @@ router.post('/',[
 
 router.get('/ThankYou',function(req,res,next){
   res.send(name_ary);
-});
-// count click on blog and news
-      
-router.post('/count',function(req,res,next){
-  res.send(b);
 });
 module.exports = router;

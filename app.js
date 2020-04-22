@@ -10,6 +10,7 @@ var newsRouter = require('./routes/news');
 var stayRouter = require('./routes/stay');
 var aboutRouter = require('./routes/about');
 var mapRouter = require('./routes/map');
+var countRouter = require('./routes/count');
 
 var app = express();
 
@@ -29,6 +30,7 @@ app.use('/news', newsRouter);
 app.use('/stay', stayRouter);
 app.use('/about', aboutRouter);
 app.use('/map', mapRouter);
+app.use('/count', countRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

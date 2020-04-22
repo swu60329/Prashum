@@ -1,16 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-var bclicks = 0;
-var nclicks = 0;
-
-function blogClick() {
-  bclicks += 1 ;
-}
-
-function newsClick() {
-  nclicks += 1 ;
-}
-
+/* GET users listing. */
+router.get('/', function(req, res, next) {
+  res.render('count');
+});
 
 module.exports = router;
