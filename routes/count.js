@@ -1,4 +1,4 @@
-class cnt_blog{
+class cnt_vst{
 
   constructor(){
     this.bclicks=0;
@@ -33,4 +33,4 @@ class cnt_blog{
   }
 }
 
-module.exports = cnt_blog;
+module.exports = cnt_vst;

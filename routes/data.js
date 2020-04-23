@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-var cnt_d =require('./count');
-var cnt = new cnt_d();
+var cnt_b =require('./count');
+var cnt = new cnt_b();
 
 
 /* GET data page. */

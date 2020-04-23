@@ -2,6 +2,7 @@
 var app = require('../app.js');
 var linkedlist = require('../routes/linkedlist.js');
 var linknode = require('../routes/linknode.js');
+var count = require('../routes/count.js')
 var comparator = require('../routes/comparator.js');
 
 
@@ -154,6 +155,15 @@ describe('Test linkedlist', function(){
         comp.greaterThanOrEqual(2,3);
         comp.greaterThanOrEqual(2,2);
     });
+
+ });
+
+ describe('Test count', function(){
+
+    it('Test call class cnt_vst', function(){
+         var comp = new comparator();
+         comp.lessThan(2,3);
+     });
 
  });
 
