@@ -133,37 +133,60 @@ describe('Test linkedlist', function(){
         assert.equal(test_find, 2);
     });
 
+    it('Test find method case can not fine', function(){
+        var linklist = new linkedlist();
+        linklist.find();
+        linklist.prepend(1);
+        linklist.append(2);
+        var test_find = linklist.find(3);
+        assert.equal(test_find, null);
+    });
+
 });
-
- describe('Test comparator', function(){
-
-    it('Test less than', function(){
-         var comp = new comparator();
-         comp.lessThan(2,3);
-     });
-     it('Test greater than', function(){
-        var comp = new comparator();
-        comp.greaterThan(2,3);
-    });
-    it('Test less than or equal', function(){
-        var comp = new comparator();
-        comp.lessThanOrEqual(2,3);
-        comp.lessThanOrEqual(2,2);
-    });
-    it('Test greater than or equal', function(){
-        var comp = new comparator();
-        comp.greaterThanOrEqual(2,3);
-        comp.greaterThanOrEqual(2,2);
-    });
-
- });
 
  describe('Test count', function(){
 
     it('Test call class cnt_vst', function(){
-         var comp = new comparator();
-         comp.lessThan(2,3);
+         var cnt = new count();
+         assert.strictEqual(cnt.bclicks , 0);
+         assert.strictEqual(cnt.nclicks , 0);
      });
+
+     it('Test setCnt_blog method', function(){
+        var cnt = new count();
+        cnt.setCnt_blog(1)
+        assert.strictEqual(cnt.bclicks , 1);
+    });
+
+    it('Test setCnt_news method', function(){
+        var cnt = new count();
+        cnt.setCnt_news(1)
+        assert.strictEqual(cnt.nclicks , 1);
+    });
+
+    it('Test addPage_blog method', function(){
+        var cnt = new count();
+        cnt.addPage_blog()
+        assert.strictEqual(cnt.bclicks , 1);
+    });
+
+    it('Test addPage_news method', function(){
+        var cnt = new count();
+        cnt.addPage_news()
+        assert.strictEqual(cnt.nclicks , 1);
+    });
+
+    it('Test getCount_b method', function(){
+        var cnt = new count();
+        var test_mth = cnt.getCount_b()
+        assert.strictEqual(test_mth , 0);
+    });
+
+    it('Test getCount_n method', function(){
+        var cnt = new count();
+        var test_mth = cnt.getCount_n()
+        assert.strictEqual(test_mth , 0);
+    });
 
  });
 

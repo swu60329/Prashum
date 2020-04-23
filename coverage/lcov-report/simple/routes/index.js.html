@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">48.39% </span>
+        <span class="strong">48% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>15/31</span>
+        <span class='fraction'>12/25</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
@@ -32,12 +32,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/5</span>
+        <span class='fraction'>0/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">48.39% </span>
+        <span class="strong">48% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>15/31</span>
+        <span class='fraction'>12/25</span>
       </div>
     </div>
   </div>
@@ -84,25 +84,13 @@
 39
 40
 41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+42</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -126,30 +114,16 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span></td><td class="text"><pre class="prettyprint lang-js">var express = require('express');
 var router = express.Router();
@@ -159,6 +133,7 @@ var linkedlist = require('./linkedlist.js');
 &nbsp;
 var node_email;
 var node_name;
+var name_ary = ["name list"];
 &nbsp;
 var node =new linkedlist();
 &nbsp;
@@ -180,6 +155,7 @@ router.post('/',[
 <span class="cstat-no" title="statement not covered" >      node_email = req.body.email ;</span>
 <span class="cstat-no" title="statement not covered" >      node_name = req.body.name ;</span>
 <span class="cstat-no" title="statement not covered" >      node.prepend(node_name);</span>
+<span class="cstat-no" title="statement not covered" >      name_ary.push(node.toLinkString());</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >      res.render('index');</span>
     }
@@ -188,30 +164,15 @@ router.post('/',[
 });
 &nbsp;
 router.get('/ThankYou',<span class="fstat-no" title="function not covered" >function(req,res,next){</span>
-<span class="cstat-no" title="statement not covered" >  var name_ary = ["name list"];</span>
-  // var one_name = node.toArray();
-<span class="cstat-no" title="statement not covered" >  name_ary.push(node);</span>
 <span class="cstat-no" title="statement not covered" >  res.send(name_ary);</span>
-  
 });
-&nbsp;
-var bclicks = 0;
-<span class="fstat-no" title="function not covered" >function blogClick() {</span>
-<span class="cstat-no" title="statement not covered" >  document.getElementById('bclicked').value = ++bclicks;</span>
-}
-&nbsp;
-var nclicks = 0;
-<span class="fstat-no" title="function not covered" >function newsClick() {</span>
-<span class="cstat-no" title="statement not covered" >  document.getElementById('nclicked').value = ++nclicks;</span>
-}
-      
 module.exports = router;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Apr 17 2020 20:58:08 GMT+0700 (GMT+07:00)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Apr 23 2020 21:08:45 GMT+0700 (GMT+07:00)
 </div>
 </div>
 <script src="../../prettify.js"></script>
