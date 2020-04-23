@@ -1,9 +1,36 @@
-var express = require('express');
-var router = express.Router();
+class cnt_blog{
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.render('count');
-});
+  constructor(){
+    this.bclicks=0;
+    this.nclicks=0;
 
-module.exports = router;
+  }
+
+  setCnt_blog(b){
+    this.bclicks=b;
+  }
+
+  setCnt_news(n){
+    this.nclicks=n;
+  }
+
+  addPage_blog(){
+    this.bclicks++;
+    return this.bclicks;
+  }
+
+  addPage_news(){
+    this.nclicks++;
+    return this.nclicks;
+  }
+
+  getCount_b(){
+    return this.bclicks;
+  }
+
+  getCount_n(){
+    return this.nclicks;
+  }
+}
+
+module.exports = cnt_blog;
