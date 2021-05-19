@@ -81,11 +81,13 @@
             function start(){
                 var main = document.getElementById('main')
                 var data = { zoom: 6, center: {lat:12.566667, lng:101.450000} }
-                first = new google.maps.Map(main, data)
+				first = new google.maps.Map(main, data)
+				
                 for (var i of item){
                     new google.maps.Marker({map: first, 
                               position: i})
-                }
+				}
+				
             }
         </script>
 		
